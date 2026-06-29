@@ -1,4 +1,4 @@
-# ZipTodo — Ziptrrip Recruitment Challenge
+# Z_Todo 
 
 A full-stack todo application built for the Ziptrrip technical recruitment process.
 
@@ -94,8 +94,3 @@ CSS layout demo: open `challenge-1/q5-layout.html` in a browser.
 - [Features & Functionality](docs/FEATURES.md)
 - [API Reference](docs/API.md)
 
----
-
-## Author
-
-Built as part of the Ziptrrip recruitment technical challenge.
