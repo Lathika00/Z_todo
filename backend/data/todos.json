@@ -1,0 +1,24 @@
+[
+  {
+    "id": "94aacb93-e13f-46b6-b734-dae2ce138f71",
+    "title": "Assignment_Ziptrrip",
+    "description": "Perform Challenge 1",
+    "completed": false,
+    "priority": "high",
+    "dueDate": "2026-06-29",
+    "tags": [],
+    "createdAt": "2026-06-29T07:58:52.280Z",
+    "updatedAt": "2026-06-29T08:40:26.880Z"
+  },
+  {
+    "id": "b17cc19b-d233-4c69-ae4d-4b6c23ae9134",
+    "title": "DSA Prep",
+    "description": "Trees",
+    "completed": false,
+    "priority": "medium",
+    "dueDate": null,
+    "tags": [],
+    "createdAt": "2026-06-29T07:23:11.436Z",
+    "updatedAt": "2026-06-29T07:23:11.436Z"
+  }
+]
