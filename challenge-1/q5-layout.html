@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q5 — Three-Box Layout Demos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; padding: 2rem; background: #f5f5f5; }
+    h2 { margin: 2rem 0 0.5rem; font-size: 1.1rem; }
+    .demo { margin-bottom: 2rem; }
+    .container {
+      width: 100%;
+      max-width: 600px;
+      min-height: 80px;
+      border: 2px solid #333;
+      background: #fff;
+    }
+    .box {
+      padding: 1rem;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+    }
+    .left.fixed.box { background: #2563eb; }
+    .middle.box { background: #7c3aed; }
+    .right.fixed.box { background: #059669; }
+
+    /* Approach 1: Flexbox */
+    .flex-container {
+      display: flex;
+      align-items: stretch;
+    }
+    .flex-container .left.fixed.box { flex: 0 0 100px; }
+    .flex-container .middle.box { flex: 1 1 auto; min-width: 0; }
+    .flex-container .right.fixed.box { flex: 0 0 100px; }
+
+    /* Approach 2: CSS Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 100px 1fr 100px;
+    }
+    .grid-container .box { min-width: 0; overflow: hidden; }
+
+    /* Approach 3: Float */
+    .float-container { overflow: hidden; }
+    .float-container .left.fixed.box { float: left; width: 100px; }
+    .float-container .right.fixed.box { float: right; width: 100px; }
+    .float-container .middle.box {
+      margin-left: 100px;
+      margin-right: 100px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1>Question 5 — Layout Approaches</h1>
+
+  <div class="demo">
+    <h2>1. Flexbox</h2>
+    <div id="container" class="container flex-container">
+      <div class="left fixed box">Left 100px</div>
+      <div class="middle box">Middle — expands</div>
+      <div class="right fixed box">Right 100px</div>
+    </div>
+  </div>
+
+  <div class="demo">
+    <h2>2. CSS Grid</h2>
+    <div id="container" class="container grid-container">
+      <div class="left fixed box">Left 100px</div>
+      <div class="middle box">Middle — expands</div>
+      <div class="right fixed box">Right 100px</div>
+    </div>
+  </div>
+
+  <div class="demo">
+    <h2>3. Float + margins</h2>
+    <div id="container" class="container float-container">
+      <div class="left fixed box">Left 100px</div>
+      <div class="right fixed box">Right 100px</div>
+      <div class="middle box">Middle — expands</div>
+    </div>
+  </div>
+</body>
+</html>
